@@ -88,7 +88,7 @@ for(let student of graduates){
   contactInfo.push(`${student.first_name} ${student.email}`)
 }
 
-//console.log(contactInfo);
+console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
@@ -99,7 +99,7 @@ for(let student of graduates){
     uni.push(school)
   }
 }
-//console.log(uni);
+console.log(uni);
 
 
 // ==== ADVANCED Array Methods ====

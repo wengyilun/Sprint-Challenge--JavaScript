@@ -29,7 +29,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-.map() returns a new array while forEach modify the original array
+.map() returns a new array while forEach does not. 
 
 2. What is the difference between a function and a method?
 function live in a global scope, ‘this’ inside the function points to the Window Object unless ‘strict mode” is used, then it returns undefined. A method is a function whos’ scope points to the object within which it was declared.

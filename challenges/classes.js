@@ -36,7 +36,7 @@ class CuboidMaker{
         this.sides = childProps.sides
       }
       howManySides(){
-          console.log(`I am a cube and I have ${this.sides}`)
+         return `I am a cube and I have ${this.sides} sides`
       }
   }
 

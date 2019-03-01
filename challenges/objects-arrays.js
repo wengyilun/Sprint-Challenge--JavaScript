@@ -124,15 +124,13 @@ The zoo wants to display both the scientific name and the animal name in front o
 "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = zooAnimals.slice()
+const animalNames = []//zooAnimals.slice()
 
-animalNames.forEach(element => {
-  element
-  return `Name: ${element.animal_name}, Scientific: ${element.scientific_name}`
+zooAnimals.forEach(element => {
+  animalNames.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}`)
 });
 
-//console.log(animalNames);
-
+console.log(animalNames);
 
 /* Request 2: .map()    
 
@@ -153,14 +151,25 @@ The zoos are concenred about animals with a lower population count. Find out whi
 const largerPopulation = zooAnimals.filter(animal => animal.population < 5)
 console.log(largerPopulation);
 
+
+
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce((subtotal, currentAnimal) => ({population: subtotal.population + currentAnimal.population})) 
+const populationTotal = zooAnimals
+.reduce((subtotal, currentAnimal) => ({population: subtotal.population + currentAnimal.population})) 
+
 console.log(populationTotal.population); 
 
+
+// 4.1: using .map with .reduce
+const populationTotal2 = zooAnimals
+.map(item => item.population)
+.reduce((subtotal, currentItem) => (subtotal + currentItem), 0)
+
+console.log(populationTotal2); 
 
 /* 
 
